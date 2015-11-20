@@ -1,11 +1,11 @@
 body {
 font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
       /*line-height: 140%;neater*/
 color: #222222;
     margin: 30px auto;
-    width: 60%;
+    width: 900px;
     font-size: 1em;
 }
 nav ul, footer ul {
@@ -32,6 +32,12 @@ a:hover {
 h1 {
     font-size: 2.5em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+p.info {
+    font-size: 18px;
+    line-height: 1.4em;
+    color: #333;
 }
 
 p.pub { 
