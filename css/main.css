@@ -1,67 +1,23 @@
-body {
-font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 17px;
-    line-height: 1.6;
-      /*line-height: 140%;neater*/
-color: #222222;
-    margin: 30px auto;
-    width: 900px;
-    font-size: 1em;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: rgb(0, 0, 238);
-}
-a:visited {
-    text-decoration: none;
-    color: #901;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 2.5em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+.container {
+    max-width: 800px;
 }
 
-p.info {
-    font-size: 18px;
-    line-height: 1.4em;
-    color: #333;
+.portrait {
+    margin: 20px auto;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+a:visited {
+    color: #901;
 }
 
 p.pub { 
- padding-left: 2em;
-  text-align: justify;
-  text-align: left;  /*not justified*/
-}
-
-
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
-
-h3 {
- font-variant: small-caps;
-  padding-top: 1em;  /*separate from earlier paragraph*/
+ padding-left: 1em;
 }
