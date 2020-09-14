@@ -21,3 +21,27 @@ a:visited {
 p.pub { 
  padding-left: 1em;
 }
+
+.desc {
+    width:30%;
+    /* text-align: center; */
+    /* color: #1772d0; */
+    padding: 10px;
+    margin: 0px;
+    border: 0px;
+    border-collapse: collapse;
+}
+
+.no-gutter > [class*='container'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+
+.project {
+    padding-left: 0px;
+}
+
+.container.custom-container {
+    padding-left: 0px;
+  }
