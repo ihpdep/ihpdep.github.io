@@ -45,3 +45,11 @@ p.pub {
 .container.custom-container {
     padding-left: 0px;
   }
+
+  .mine {
+    padding-left: 20px;
+  }
+
+  .verybold {
+    FONT-WEIGHT: bold;
+  }
