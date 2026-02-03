@@ -38,8 +38,13 @@
                     <p>
                         Email: yli AT cs DOT ecnu DOT edu DOT cn
                     </p>
-                   				            <p>[<a href="https://www.semanticscholar.org/author/Y.-Li/50024044">Semantic Scholar</a>][<a href="https://scholar.google.com/citations?user=N1ZDSHYAAAAJ">Google Scholar</a>][<a href="https://faculty.ecnu.edu.cn/_s16/ly2_19214/main.psp">中文</a>]<br>
-												[<a href="https://space.bilibili.com/487404760">Bilibili</a>][<a href="https://www.xiaohongshu.com/user/profile/63428cc7000000001901f9a4">小红书🍠</a>][<a href="https://www.douyin.com/user/MS4wLjABAAAArshOwEmGu81_0uvYgWzgXK1SV-Pfr1BOF6iPJurFtRY">抖音</a>]</p>
+                   				            <p>[<a href="https://www.semanticscholar.org/author/Y.-Li/50024044">Semantic Scholar</a>][<a href="https://scholar.google.com/citations?user=N1ZDSHYAAAAJ">Google Scholar</a>]<br>
+                                                [<a href="https://faculty.ecnu.edu.cn/_s16/ly2_19214/main.psp">中文</a>]
+												[<a href="https://space.bilibili.com/487404760">Bilibili</a>]
+                                                [<a href="#" onclick="showImage(event, './files/redbook.jpg','https://www.xiaohongshu.com/user/profile/63428cc7000000001901f9a4')">小红书🍠</a>]
+                                                [ <a href="#" onclick="showImage(event, 'files/tiktok.jpg','https://www.douyin.com/user/MS4wLjABAAAArshOwEmGu81_0uvYgWzgXK1SV-Pfr1BOF6iPJurFtRY')">抖音</a>]
+                                                <br>
+                                                </p>
                 </div>
                 <div class="col-4 col-sm-6 col-xs-12">
                     <img class="portrait img-responsive" src="files/photo-new.jpg">
@@ -171,7 +176,7 @@
                         <p class="pub">
                             <b>Audio-VLA: Adding Contact Audio Perception to Vision-Language-Action Model for Robotic Manipulation</b> <br>
                             Xiangyi Wei, Haotian Zhang, Xinyi Cao, Siyu Xie, Weifeng Ge, Yang Li, Changbo Wang<br>
-                            <i>Arxiv</i>, 2025<br>
+                            <i>ICRA</i>, 2026<br>
 			    			[<a href="https://arxiv.org/abs/2511.09958">PAPER</a>]
                             [<a href="https://wxone.github.io/AudioVLA/">Project Webpage</a>]
                         </p>
@@ -535,5 +540,61 @@
 
             </main>
     </div>
+
+        <!-- 悬浮图片容器（页面只需要一个） -->
+    <div id="floatingImg" style="
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:#00000088;
+    padding:10px;
+    border-radius:8px;
+    z-index:9999;
+    text-align:center;
+    ">
+    <img id="popupImg" style="max-width:80vw; max-height:80vh; display:block; margin:0 auto;">
+    <a id="popupLink" href="#" target="_blank" style="
+    display:block;
+    margin-top:10px;
+    color:#fff;
+    text-decoration:underline;
+    font-size:14px;
+    "></a>
+    </div>
+
+    <script>
+    function showImage(e, url, linkUrl) {
+    e.preventDefault(); // 阻止跳转
+    document.getElementById('popupImg').src = url;
+    var linkElement = document.getElementById('popupLink');
+    var floatingImg = document.getElementById('floatingImg');
+    
+    // 如果有链接URL，显示链接；否则隐藏
+    if (linkUrl) {
+        linkElement.href = linkUrl;
+        linkElement.textContent = linkUrl;
+        linkElement.style.display = 'block';
+    } else {
+        linkElement.style.display = 'none';
+    }
+    
+    floatingImg.style.display = 'block';
+    }
+
+    // 点击背景关闭（但不点击链接时关闭）
+    document.getElementById('floatingImg').onclick = function (e) {
+        if (e.target === this || e.target.id === 'popupImg') {
+            this.style.display = 'none';
+        }
+    };
+    
+    // 阻止链接点击时关闭弹窗
+    document.getElementById('popupLink').onclick = function (e) {
+        e.stopPropagation();
+    };
+    </script>
+
 
 </body></html>
